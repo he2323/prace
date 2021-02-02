@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<script>
+function zmienKolorTla(){
+	var nowyKolor=document.getElementById("kolorTla").value;
+	document.getElementById("strona").style.backgroundColor=nowyKolor;
+	document.getElementById("strona").innerHTML="nowy tekst";
+}
+function zmienAdres(){
+	document.getElementById("adres").href="http://www.onet.pl";
+	//dla id="obrazek" 
+	//document.getElementById("obrazek").src="innyObrazek.jpg";
+	
+}
+</script>
+<style>
+	.panel{
+		width: 220px;
+		height: 280px;
+		background-color: #ccc;
+		position: absolute;
+		top: 100px;
+		left: 0px;
+		transition: All 1s ease;
+		transform: translate(-200px);
+	}
+	.panel:hover{
+		transform: translate(0px);
+	}
+</style>
+<body>
+
+
+<div id="strona">Lorem Ipsum
+	<a href="http://www.wp.pl" id="adres" onClick="zmienAdres()">Przejdz na WP.pl</a>
+</div>
+	
+<div class="panel">
+	Kolor tla: <input type="color" id="kolorTla" onchange="zmienKolorTla()"><br>
+	Wielkosc liter: <select id="wielkoscLiter">
+						<option value="10px">10px </option>
+						<option value="12px">12px </option>
+						<option value="14px">14px </option>
+					</select>
+</div>	
+	
+</body>
+</html>

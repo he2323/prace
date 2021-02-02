@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="php.php" method="post">
+        <button type="submit" name="sub" value="SELECT * FROM osoby;">Pokaż osoby</button>
+        <button type="submit" name="sub" value="SELECT * FROM miejsca;">Pokaż miejsca</button>
+        <button type="submit" name="sub" value="SELECT miejsca.miejsce_urodzenia FROM miejsca INNER JOIN osoby ON miejsca.id_miejsce_urodzenia = osoby.id_miejsce_urodzenia;">kw1</button>
+        <button type="submit" name="sub" value="SELECT miejsca.miejsce_urodzenia FROM miejsca WHERE id_miejsce_urodzenia NOT IN (SELECT id_miejsce_urodzenia FROM osoby);">kw2</button>
+        <button type="submit" name="sub" value="SELECT * FROM osoby WHERE data_urodzenia > '2000-01-01';">kw3</button>
+        <button type="submit" name="sub" value="SELECT * FROM osoby WHERE imie LIKE 'A%';">kw4</button>
+        <input type="number" name="pesel" id="pesel">
+        <input type="text" name="imie" id="imie">
+        <input type="text" name="nazwisko" id="nazwisko">
+        <input type="date" name="data_urodzenia" id="data_urodzenia">
+        <input type="number" name="id_miejsce_urodzenia" id="miejsce">
+        <button type="submit" name="dodaj">Dodaj osobę</button>
+        
+    </form>
+
+</body>
+
+</html>

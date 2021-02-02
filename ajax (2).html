@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8"></head>
+	<style>li { color:white;background-color:green;display:inline;}</style>
+<body>
+	<ul>
+		<li onmouseover="show(1)">Opcja 1</li>
+		<li onmouseover="show(2)">Opcja 2</li>
+		<li onmouseover="show(3)">Opcja 3</li>
+	<ul>
+	<div id="dane">Odpowiedź z PHP: </div>
+</body>
+</html>
+<script>
+function getXMLHttpRequest(){//jest to funkcja wymagana do uzycia ajaxa w czystym JS
+  try { return new XMLHttpRequest();} catch(err1) {//normalna przegladarka
+    try { return new ActiveXObject('Msxml2.XMLHTTP'); } catch(err2) {//nowsze IE
+      try { return new ActiveXObject('Microsoft.XMLHTTP');} catch(err3) {//stare IE
+return false; }
+    }
+  }
+}    
+var r= getXMLHttpRequest();  //r to uchwyt do polaczenia
+
+ //funkcja przechwytujaca dane z serwera i wrzucajaca je na strone
+function processResponse() {
+	if(r.readyState == 4 && r.status == 200)//gdy serwer odpowie,ze ok (blad 200)
+		document.getElementById('dane').innerHTML=
+			"Odpowiedź z PHP: "+r.responseText;//wrzuc odpowiedz responseText do DIVa
+}
+
+//funkcja wywolana w momencie najechania myszki
+function show(a) {
+	r.open('GET', 'dane.php?id='+a, true);//przygotowanie polaczenia`
+	r.onreadystatechange = processResponse;//odpowiedz przyjdzie do processResponse
+	r.send(null);//wyslanie polecenia na serwer
+}
+
+
+
+
+
+
+
+
+
+</script>

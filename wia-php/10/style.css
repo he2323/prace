@@ -1,0 +1,39 @@
+#all{
+    width: 1024px;
+    margin: 0 auto;
+    font-size: large;
+}
+#srodek{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 1024px;
+
+}
+#baner{
+    width: 1024px;
+    height: 200px;
+    background-color: lightgreen;
+    color: red;
+}
+#menu1{
+    width: 200px;
+    height: 500px;
+    background-color: mediumslateblue;
+}
+#tresc{
+    width: 724px;
+    height: 500px;
+    color: magenta;
+    background-color: white;
+}
+#menu2{
+    width: 100px;
+    height: 500px;
+    background-color: red;
+}
+#stopka{
+    width: 1024px;
+    height: 100px;
+    background-color: orange;
+}

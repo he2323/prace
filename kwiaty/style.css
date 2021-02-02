@@ -1,0 +1,87 @@
+body{
+	background-color: #dddab7;
+}
+
+header{
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;/*margines automatyczny*/
+}
+h1{
+	text-align: center;
+}
+
+nav{
+	width: 800px;
+	height: 24px;
+	background-color: red;
+	margin: 0 auto;
+	background: linear-gradient(to bottom, #555, #eee, #555);
+	border-radius: 12px;
+}
+
+.link{
+	color: red;
+	float: left;
+	margin-left: 50px;
+}
+aside{
+	
+	text-align: center;
+	color:white;
+	width: 800px;
+	height: 190px;
+	
+	margin:auto;
+	}
+
+.ob1{
+	background-image: url('1.jpg');
+	width: 240px;
+	height: 20px;
+	border-radius: 15px;
+	border: 3px solid white;
+	float: left;
+	margin-left: 5px;
+	padding-top: 160px;
+	
+}
+.ob2{
+	background-image: url('2.jpg');
+	width: 240px;
+	height: 20px;
+	border-radius: 15px;
+	border: 3px solid white;
+	float: left;
+	margin-left: 5px;
+	padding-top: 160px;
+	
+}
+.ob3{
+	background-image: url('3.jpg');
+	width: 240px;
+	height: 20px;
+	border-radius: 15px;
+	border: 3px solid white;
+	float: left;
+	margin-left: 5px;
+	padding-top: 160px;
+	
+}
+article{
+	background-color: white;
+	width: 600px;
+	height:250px;
+	border-radius:15px;
+	margin: 0 auto;
+	float: left;
+	line-height: 25px;
+	text-align:center;
+	margin: 0 600px;
+}
+footer{
+	text-align: right;
+	float: right;
+	padding-top:50px;
+	
+}

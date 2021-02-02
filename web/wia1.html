@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Strona 1 WIA2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>	
+	
+	<script>
+		function zmienKolor(){
+			document.getElementById("box").style.backgroundColor="green";
+		}
+		function ukryj(){
+			document.getElementById("box").style.display="none";
+		}
+		
+		function pokaz(){
+			document.getElementById("box").style.display="block";
+		}
+		function tekst(){
+			document.getElementById("box").innerHTML="Ala ma kota";
+		}
+		
+		function przepisz(){
+			var napis=document.getElementById("tekstowo").value;
+			document.getElementById("box").innerHTML=napis;
+			document.getElementById("dlugosctekstu").innerHTML=napis.length+" znakow";
+		}
+		function zmienAdres(){
+			document.getElementById("adres").href="http://onet.pl";
+		}
+		
+		function zmienRozmiar(){
+			var rozmiarCzcionki=document.getElementById("rozmiar").value;
+			document.getElementById("adres").style.fontSize=rozmiarCzcionki+"px";
+		}
+		function zmienKolorek(){
+			document.getElementById("box").style.backgroundColor=
+				document.getElementById("kolorek").value;
+		}
+	</script>
+	
+	<a href="http://www.wp.pl" id="adres" onClick="zmienAdres()">WP.PL</a>
+	
+	<input type="button" value="Zmien Kolor" onClick="zmienKolor()">
+	<input type="button" value="ukryj" onMouseOver="ukryj()">
+	<input type="button" value="pokaz" onMouseOver="pokaz()">
+	<input type="button" value="zmien tekst" onClick="tekst()">
+	<input type="range" min="0" max="255" id="rozmiar" onChange="zmienRozmiar()">
+	<input type="color" id="kolorek" onChange="zmienKolorek()">
+	
+	<textarea id="tekstowo" onKeyUp="przepisz()"></textarea>
+	<div id="dlugosctekstu">0 znakow</div>
+	<div id="box"></div>
+		
+</body>
+</html>

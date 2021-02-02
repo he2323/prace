@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="123.97618mm"
+   height="125.48809mm"
+   viewBox="0 0 123.97618 125.48809"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="gwiazdabaner.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="909.99998"
+     inkscape:cy="508.57144"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="968"
+     inkscape:window-height="991"
+     inkscape:window-x="952"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-11.339291,-13.60714)">
+    <path
+       id="path1409"
+       style="opacity:0.902;fill:#0000ff;stroke:none;stroke-width:1"
+       d="M 60.476193,139.09523 C 56.859589,125.52502 57.546848,111.95481 52.448029,97.628647 45.951564,81.269612 26.370528,83.987909 11.339291,80.886899 29.0025,74.933656 46.411754,74.673677 55.073732,61.51945 c 6.58852,-6.762793 18.468706,-15.146915 27.325082,-47.91231 0.551663,21.166153 11.051973,53.561822 11.051973,53.561822 -1.601667,3.276266 19.790683,8.4687 41.864683,13.717939 -21.67,1.739921 -45.839179,1.917861 -52.049909,13.31983 C 69.305528,99.624199 67.199914,122.8233 60.476193,139.09523 Z"
+       sodipodi:nodetypes="ccccccccc" />
+  </g>
+</svg>

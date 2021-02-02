@@ -1,0 +1,295 @@
+<html>
+
+<head>
+    <title>FIlip Rusoł 3B</title>
+    <style type="text/css">
+        canvas {
+            border: 5px solid;
+            border-image: url(cat_palette.jpg) 1 round;
+            margin: 0 auto;
+            width: 800px;
+            display: block;
+            margin-top: 50px;
+            background-image: url(background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>You have to stay alive for <span id="time">01:00</span> minut!</div>
+    <div class="points">Your points: <span id="points">0</span></div>
+    <canvas id="gameCanvas" height="600px" width="800px">
+        <script type="text/javascript">
+            function getXMLHttpRequest() {//jest to funkcja wymagana do uzycia ajaxa w czystym JS
+                try { return new XMLHttpRequest(); } catch (err1) {//normalna przegladarka
+                    try { return new ActiveXObject('Msxml2.XMLHTTP'); } catch (err2) {//nowsze IE
+                        try { return new ActiveXObject('Microsoft.XMLHTTP'); } catch (err3) {//stare IE
+                            return false;
+                        }
+                    }
+                }
+            }
+            var r = getXMLHttpRequest();
+            document.onmousemove = function (e) {
+                pozycjaMyszki(e);
+            }
+            let points = 0;
+            const imagePalette = new Image();
+            imagePalette.src = "cat_palette.jpg";
+            var canvas = document.getElementById("gameCanvas");
+            var ctx = canvas.getContext("2d");
+            var ballR = 10, x = canvas.width / 2, y = canvas.height - 30,
+                dx = 3, dy = -3, pongH = 15, pongW = 100, pongX = (canvas.width - pongW) / 2,
+                brickRows = 3, brickCol = 9, brickW = 75, brickH = 20,
+                brickPadding = 10, brickOffsetTop = 30, brickOffsetLeft = 30, timer = 0, lvl = 1;
+
+            var bricks = [];
+            var bricks2 = [];
+            var bricks3 = [];
+            for (c = 0; c < brickCol; c++) {
+                for (r = 0; r < brickRows; r++) {
+                    bricks.push({
+                        x: (c * (brickW + brickPadding)) + brickOffsetLeft,
+                        y: (r * (brickH + brickPadding)) + brickOffsetTop,
+                        status: 1
+                    });
+                }
+            }
+            for (c = 0; c < brickCol; c++) {
+                for (r = 0; r < brickRows + 2; r++) {
+                    bricks2.push({
+                        x: (c * (brickW + brickPadding)) + brickOffsetLeft,
+                        y: (r * (brickH + brickPadding)) + brickOffsetTop,
+                        status: 1
+                    });
+                }
+            }
+            for (c = 0; c < brickCol; c++) {
+                for (r = 0; r < brickRows + 3; r++) {
+                    bricks3.push({
+                        x: (c * (brickW + brickPadding)) + brickOffsetLeft,
+                        y: (r * (brickH + brickPadding)) + brickOffsetTop,
+                        status: 1
+                    });
+                }
+            }
+            //
+            function startTimer(duration, display) {
+                var timer = duration, minutes, seconds;
+                setInterval(function () {
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    display.textContent = minutes + ":" + seconds;
+                    if (timer <= 0) {
+                        timer = duration;
+                        lvl++;
+                        clearInterval(myInter);
+                        if (lvl === 1) {
+                            poziom = draw1;
+                        }
+                        else if (lvl === 2) {
+                            poziom = draw2;
+                        }
+                        else if (lvl === 3) {
+                            poziom = draw3;
+                        }
+                        else gameOver();
+                        myInter = setInterval(poziom, 10);
+
+                    } else timer--;
+                }, 1000);
+            }
+
+            window.onload = function () {
+                var Minut = 100,
+                    display = document.querySelector('#time');
+
+                startTimer(Minut, display);
+            };
+
+            function pozycjaMyszki(e) {
+                if (!e)
+                    var e = window.event;
+                if (e.pageX) {
+                    pongX = e.pageX;
+
+                } else if (e.clientX) {
+                    pongX = e.clientX + document.body.scrollLeft;
+                }
+
+                return { pongX }
+            }
+            function drawBall() {
+                ctx.beginPath();
+                ctx.arc(x, y, ballR, 0, Math.PI * 2);
+                ctx.fillStyle = "red";
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            function drawPong() {
+                ctx.beginPath();
+                ctx.drawImage(imagePalette, pongX - pongW * 4, canvas.height - pongH, pongW, pongH);
+                ctx.closePath();
+            }
+
+            function drawBricks() {
+                bricks.forEach(function (brick) {
+                    if (!brick.status) return;
+
+                    ctx.beginPath();
+                    ctx.rect(brick.x, brick.y, brickW, brickH);
+                    ctx.fillStyle = "#1B5E20";
+                    ctx.fill();
+                    ctx.closePath();
+                });
+            }
+            function drawBricks2() {
+                bricks2.forEach(function (brick) {
+                    if (!brick.status) return;
+
+                    ctx.beginPath();
+                    ctx.rect(brick.x, brick.y, brickW, brickH);
+                    ctx.fillStyle = "red";
+                    ctx.fill();
+                    ctx.closePath();
+                });
+            }
+            function drawBricks3() {
+                bricks3.forEach(function (brick) {
+                    if (!brick.status) return;
+
+                    ctx.beginPath();
+                    ctx.rect(brick.x, brick.y, brickW, brickH);
+                    ctx.fillStyle = "blue";
+                    ctx.fill();
+                    ctx.closePath();
+                });
+            }
+            function collisionDetection() {
+                if (lvl === 1) {
+                    bricks.forEach(function (b) {
+                        if (!b.status) return;
+
+                        var inBricksColumn = x > b.x && x < b.x + brickW,
+                            inBricksRow = y > b.y && y < b.y + brickH;
+
+                        if (inBricksColumn && inBricksRow) {
+                            dy = -dy;
+                            b.status = 0;
+                            points += 200;
+
+                        }
+                    });
+                }
+                if (lvl === 2) {
+                    bricks2.forEach(function (b) {
+                        if (!b.status) return;
+
+                        var inBricksColumn = x > b.x && x < b.x + brickW,
+                            inBricksRow = y > b.y && y < b.y + brickH;
+
+                        if (inBricksColumn && inBricksRow) {
+                            dy = -dy;
+                            b.status = 0;
+                            points += 400;
+
+                        }
+                    });
+                }
+                if (lvl === 3) {
+                    bricks3.forEach(function (b) {
+                        if (!b.status) return;
+
+                        var inBricksColumn = x > b.x && x < b.x + brickW,
+                            inBricksRow = y > b.y && y < b.y + brickH;
+
+                        if (inBricksColumn && inBricksRow) {
+                            dy = -dy;
+                            b.status = 0;
+                            points += 800;
+
+                        }
+                    });
+                }
+            }
+            function showPoints() {
+                if (r.readyState == 4 && r.status == 200) {
+                    document.getElementById("points").innerHTML = points;
+                }
+            }
+            function show(a) {
+                r.open('GET', 'points.php?points=' + ponts +, true);//przygotowanie polaczenia`
+                r.onreadystatechange = processResponse;//odpowiedz przyjdzie do processResponse
+                r.send(null);//wyslanie polecenia na serwer
+            }
+            function drawRest() {
+                drawBall();
+                drawPong();
+                collisionDetection();
+
+                if (hitSideWall())
+                    dx = -dx;
+
+                if (hitTop() || hitPong())
+                    dy = -dy;
+
+                if (gameOver())
+                    document.location.reload();
+
+
+
+                function hitPong() {
+                    return hitBottom() && ballOverPong();
+                }
+                function ballOverPong() { return x > pongX - pongW * 4 && x < pongX - pongW * 3; }
+                function hitBottom() { return y + dy > canvas.height - ballR; }
+                function gameOver() { return hitBottom() && !ballOverPong(); }
+                function hitSideWall() { return x + dx > canvas.width - ballR || x + dx < ballR; }
+                function hitTop() { return y + dy < ballR; }
+                function xOutOfBounds() { return x + dx > canvas.width - ballR || x + dx < ballR; }
+
+                x += dx;
+                y += dy;
+            }
+            function draw1() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBricks();
+                drawRest();
+                showPoints();
+            }
+            function draw2() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBricks2();
+                drawRest();
+                showPoints();
+            }
+            function draw3() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBricks3();
+                drawRest();
+                showPoints();
+            }
+            var poziom;
+            if (lvl === 1) {
+                poziom = draw1;
+            }
+            if (lvl === 2) {
+                poziom = draw2;
+            }
+            if (lvl === 3) {
+                poziom = draw3;
+            }
+
+            var myInter = setInterval(poziom, 10);
+
+        </script>
+
+</body>
+
+</html>

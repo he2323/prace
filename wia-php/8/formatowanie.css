@@ -1,0 +1,54 @@
+body {
+  background-color: indianred;
+  text-align: center;
+}
+.all {
+  margin: 0 auto;
+  width: 1000px;
+  height: 650px;
+}
+.tresc {
+  font-size: 30px;
+  font-family: "Times New Roman";
+  color: red;
+  text-align: center;
+  width: 800px;
+  height: 400px;
+  background-color: greenyellow;
+}
+.header {
+  font-size: 20px;
+  font-family: Arial;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 1000px;
+  height: 150px;
+  background-color: red;
+  display: inline-block;
+}
+#menuitresc {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  width: 1000px;
+  height: 400px;
+}
+.menu {
+  width: 200px;
+  height: 400px;
+  background-color: yellow;
+}
+.stopka {
+  font-size: 15px;
+  font-family: Monotype-Corsiva;
+  color: yellow;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightskyblue;
+  width: 1000px;
+  height: 100px;
+}
+@font-face {
+  font-family: Monotype-Corsiva;
+  src: url(mono.ttf);
+}

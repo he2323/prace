@@ -1,0 +1,29 @@
+th{
+    background-color: yellow;
+    width: 2012px;
+}
+table{
+    border: 1px black solid;
+    font-size: 25px;
+    color: black;
+}
+tr{
+    height: 100px;
+}
+.tytul{
+    font-weight: bold;
+    text-align: center;
+}
+.comp{
+    text-align: left;
+    background-color: yellow;
+    font-weight: bold;
+}
+.wartosc{
+    background-color: green;
+    text-align: right;
+}
+#raz{
+    text-align: center;
+    background-color: purple;
+}

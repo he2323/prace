@@ -1,0 +1,70 @@
+body {
+	background-color: black;
+}
+
+
+.image-1 {
+	width: 447px;
+	height: 298px;
+	border: 4px solid white;
+	background-image: url('image-1.jpg');
+	filter: sepia(100%);
+	transform: translate(150px, 170px) rotate(50deg);
+	transition: all 1.5s ease;
+position: absolute;
+transition: all 2s ease;
+	z-index: 99;
+}
+.image-1:hover {
+	filter: sepia(0%);
+	transform: translate(360px, 200px) rotate(0deg) scale(1.5);
+	z-index: 100;
+}
+.image-2 {
+	width: 109px;
+	height: 71px;
+	border: 4px solid white;
+	position: absolute;
+transition: all 2s ease;
+	background-image: url('image-2.jpg');
+	filter: blur(5px);
+	transform: translate(500px, 230px) rotate(50deg) scale(3);
+	z-index: 70;
+}
+.image-2:hover {
+	filter: blur(0px);
+	transform: translate(360px, 200px) rotate(0deg) scale(3);
+	z-index: 100;
+}
+.iamge-3{
+	width: 109px;
+	height: 71px;
+	position: absolute;
+	transition: all 2s ease;
+	border: 4px solid white;
+	background-image: url(image-3.jpg);
+	filter: grayscale(100%);
+	transform: translate(500px, 230px) rotate(45deg);
+	z-index: 100;
+}
+.image-3:hover {
+	filter: grayscale(0%);
+	transform: translate(360px, 200px) rotate(0deg) scale(3);
+	z-index: 100;
+}
+.image-4{
+	width: 608px;
+	height: 746px;
+background-image: url(4.jpg);
+position: absolute;
+	transition: all 2s ease;
+	border: 4px solid white;
+	filter: blur(2px);
+	transform: translate(50px, 230px) rotate(40deg);
+z-index: 70;
+}
+.image-4:hover{
+	filter: blur(0px);
+	transform: translate(360px, 200px) rotate(0deg);
+	z-index: 100;
+}

@@ -1,0 +1,48 @@
+.numerki{
+	color:red;
+}
+td{
+	border: 1px solid black;
+	padding-left:30px;
+	padding-right:30px;
+}
+
+tbody{
+	border-collapse:collapse;
+	font-weight: bold;
+}
+
+.peri{
+	text-align:center;
+	border-collapse: collapse;
+	color:green;
+}
+
+.yellow{
+	background-color: khaki;
+}
+
+.green{
+	background-color: greenyellow;
+}
+
+.idk{
+	background-color: aquamarine;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+.top{
+	text-align: center;
+}
+
+.blue{
+	background-color: cornflowerblue;
+}
+
+.sub{
+	background-color: lightgreen;
+}
+

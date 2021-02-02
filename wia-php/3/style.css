@@ -1,0 +1,29 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+form {
+    width: 40%;
+    height: 15%;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 auto;
+
+}
+input {
+    width: 50px;
+    background-color: aqua;
+}
+section{
+    display: inline-block;
+    
+}
+.letter{
+    width: 50px;
+}
+div
+{
+    width: 5px;
+    float: left;
+    display: none;
+}

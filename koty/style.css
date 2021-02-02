@@ -1,0 +1,219 @@
+.z1{
+	border:1px solid blue;
+	width:100%;
+	text-align:center;
+	color:red;
+	
+}
+
+
+
+.z2{
+	margin-top:20px;
+	border:2px solid blue;
+	border-left:10px solid blue;
+	border-right:10px solid blue;
+	width:50%;
+	text-align: center;
+	color:red;
+	margin: center;
+	font-weight:bold;
+}
+.z3{
+	
+	margin-top:20px;
+	width:75%;
+	background-color:black;
+	font-style:italic;
+	text-decoration:underline;
+	color:white;
+	text-align:center;
+	border-left:5px solid pink;
+	border-top:5px solid red;
+	border-right:5px solid green;
+	border-bottom:5px solid blue;
+}
+
+.z4
+{
+	margin-top:20px;
+	background-image: url('aaas.gif');
+	width:600px;
+	height:300px;
+	border:5px dashed black;
+	text-align:right;
+	font-size:30;
+	font-style:italic;
+	font-weight:bold;
+	padding-top:100px;
+	padding-right:30px;
+	
+}
+
+
+.z5
+{
+	margin-top:20px;
+	width:100%;
+	height:50px;
+	background-repeat:repeat;
+	background-image:url('4.gif');	
+	text-align:right;
+}
+
+.z6
+{
+	margin-top:20px;
+	margin-left: 300px;
+	
+	width:750px;
+	height:250;
+	border:5px solid #626263;
+	background-color:b0b0b0;
+	background-image: url('aaa.gif');
+	background-repeat:no-repeat;
+background-position:bottom left;
+	
+}
+
+.z6 .w1
+{
+	text-align:center;
+	font-weight:bold;
+	font-style:italic;
+	font-size:25;
+	padding-top:90px;
+	
+}
+
+.z6 .w2
+{
+	text-align:center;
+}
+	
+	
+.z7
+{
+		margin-top:20px;
+		width:100%;
+		height: 53px;
+		border: 2px solid ;
+	
+}
+
+
+.z7 .w1{
+	margin:3px;
+	border:2px solid red;
+	
+}
+	
+.z7 .w2{
+	margin:3px;
+	border:2px solid blue;
+	
+}
+
+.z8{	margin-top: 20px;}
+
+.z8 .w1
+{
+	
+	margin:0 auto;
+	padding-top:10px;
+	text-align: center;
+	color:white;
+	width:20%;
+	height:20px;
+	background-color:red;
+	border:3px solid black;
+}
+
+.z8 .w2
+{
+		margin:0 auto;
+	
+	text-align: center;
+	color:green;
+	width:10%;
+	height:25px;
+	background-color:red;
+	border-left:3px solid black;
+	border-right:3px solid black;
+	border-bottom:3px solid black;
+	
+}
+	
+.z9 
+{		margin:0 auto;
+		margin-top: 20px;
+		width:580px;
+		height:200px;
+		border: 3px dashed black;
+		border-radius:20px;
+		background-image:url('grumpy.jpg');
+		background-repeat:no-repeat;
+		font-family:"Comic Sans MS", cursive, sans-serif;
+		font-size:25;
+		text-align:right;
+		padding-right:20px;
+		
+}
+
+.z9 .w2{padding-right: 90px;)}
+	
+
+.z10{
+	margin:0 auto;
+	margin-top:20px;
+	width:700px;
+	height:200;
+	background-color:pink;
+	background-image:url('5.gif');
+	background-repeat:no-repeat;
+	border-radius:10px;
+	
+}
+	
+.z10 .w1{
+	padding-left:220px;
+	font-size:20;
+	padding-top:10px;
+	font-weight:bold;
+	font-style:italic;
+	letter-spacing:5px;
+	background-image:url('3.gif');
+	background-repeat:no-repeat;
+	background-position:right;
+}
+
+.z10 .w2{
+	margin-top:10px;
+	padding-left:220px;
+	letter-spacing:5px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

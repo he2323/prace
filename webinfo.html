@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--Filip Rusoł-->
+	<title>wia4</title>
+<script>
+	function dodawanie() {
+            var szerokosc_fundamentu=document.getElementById("szerokosc_fundamentu").value;
+            szerokosc_fundamentu=parseFloat(szerokosc_fundamentu);
+            var dlugosc_fundamentu=document.getElementById("dlugosc_fundamentu").value;
+            dlugosc_fundamentu=parseFloat(dlugosc_fundamentu);
+            var powierzchnia_fundamentu= szerokosc_fundamentu*dlugosc_fundamentu;
+            document.getElementById("wyniki").value=powierzchnia_fundamentu;
+      }
+
+function fundamenty(){
+	if(document.getElementById("regularny").checked==true){
+	document.getElementById("dlugosc_fundamentu").style.display='block';
+	document.getElementById("szerokosc_fundamentu").style.display='block';
+	document.getElementById("wyniki").style.display='block';
+	}
+	if (document.getElementById("zlozony").checked==true){
+			document.getElementById("dlugosc_fundamentu").style.display='none';
+	document.getElementById("szerokosc_fundamentu").style.display='none';
+	}
+}
+</script>
+</head>
+<body>
+
+<input type="text" name="imie" id="imie" placeholder="imie" required><br>
+<input type="text" name="nazwisko" id="nazwisko" placeholder="nazwisko" required><br>
+<input type="number" name="numer" placeholder="numer telefonu" required><br>
+<select name="woj">
+            <option value="1">Dolnośląskie</option>
+            <option value="2">Kujawsko-Pomorskie</option>
+            <option value="3">Lubelskie</option>
+            <option value="4">Lubuskie</option>
+            <option value="5">Łódzkie</option>
+            <option value="6">Małopolskie</option>
+            <option value="7">Mazowieckie</option>
+            <option value="8">Opolskie</option>
+            <option value="9">Podkarpackie</option>
+            <option value="10">Podlaskie</option>
+            <option value="11">Pomorskie</option>
+            <option value="12">Śląskie</option>
+            <option value="13">Świętokrzyskie</option>
+            <option value="14">Warmińsko-Mazurskie</option>
+            <option value="15">Wielkopolskie</option>
+            <option value="16">Zachodniopomorskie</option>
+         </select><br>
+<input type="text" name="miejscowosc" placeholder="miejscowosc"><br>
+<input type="text" name="ulica" placeholder="ulica"><br>
+<input type="textarea" maxlength="500" name="zapytanie" placeholder="text"><br>
+<input type="radio" name="fundament" value="regularny" id="regularny" onclick="fundamenty();">fundament regularny<br>
+<input type="radio" name="fundament" onclick="fundamenty();" value="zlozony" id="zlozony">fundament zlozony<br>
+<input type="number" name="dlugosc_fundamentu" id="dlugosc_fundamentu" placeholder="dlugosc fundamentu" onchange="dodawanie()" style="display: none;"><br>
+<input type="number" name="szerokosc_fundamentu" id="szerokosc_fundamentu" placeholder="szerokosc_fundamentu" onchange="dodawanie()" style="display: none;"><br>
+<textarea rows="1" cols="1"style="display: none;" id="wyniki" disabled >
+
+
+</textarea>
+
+<br>
+<input type="number" id="kat_dzialki" placeholder="kat dzialki" style="display:none;"><br>
+<div id="liczba_odwiertow" style="display:none;">
+liczba odwiertow: <select>
+	   <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+</select></div>
+<div id="ocieplenie_ukryte" style="display: none;">
+	material: <select id="material">
+		<option value="styropian">styropian</option>
+		<option value="welna">welna mineralna</option>
+	</select><br>
+	ilosc sztuk: <input type="number" id="liczba_sztuk" placeholder="liczba sztuk" onchange="licz_sztuki()"><br>
+	powierzchnia jest rowna: <textarea rows="1" cols="20" id="powierzchnia_ocieplenia" disabled>
+</textarea>
+</div>
+<script>
+	function dzialka_pochylona(){
+if(document.getElementById("dzialka_pochylona").checked==true){
+	document.getElementById("kat_dzialki").style.display='block';
+	}else{
+		document.getElementById("kat_dzialki").style.display='none';
+	}
+}
+function szkody_gornicze(){
+	if(document.getElementById("odwierty_geologiczne").checked==true){
+	document.getElementById("liczba_odwiertow").style.display='block';
+	}else{
+		document.getElementById("liczba_odwiertow").style.display='none';
+	}
+}
+function ocieplenie(){
+if(document.getElementById("dodatkowe_ocieplenie").checked==true){
+	document.getElementById("ocieplenie_ukryte").style.display='block';
+	}else{
+		document.getElementById("ocieplenie_ukryte").style.display='none';
+	}
+}
+function licz_sztuki(){
+	         var ilosc_sztuk=document.getElementById("liczba_sztuk").value;
+         
+            if (document.getElementById("material").value=="styropian") { 
+            	document.getElementById("powierzchnia_ocieplenia").value=ilosc_sztuk+"m2";
+            }
+            if (document.getElementById("material").value=="welna") { 
+            	   ilosc_sztuk=parseFloat(ilosc_sztuk);
+            	document.getElementById("powierzchnia_ocieplenia").value=ilosc_sztuk*10+"m2";
+            }
+           
+}
+</script>
+
+
+<input type="checkbox" id="dzialka_pochylona" onClick="dzialka_pochylona()">dzialka pochylona<br>
+<input type="checkbox" id="szkody_górnicze" >szkody górnicze<br>
+<input type="checkbox" id="projekt_zastępczy">projekt zastępczy<br>
+<input type="checkbox" id="dodatkowe_odwodnienie">dodatkowe odwodnienie <br>
+<input type="checkbox" id="dodatkowe_ocieplenie" onclick="ocieplenie()">dodatkowe ocieplenie <br>
+<input type="checkbox" onclick="szkody_gornicze()" id="odwierty_geologiczne">odwierty geologiczne <br>
+<input type="submit" id="submit_button">
+
+</body>
+</html>

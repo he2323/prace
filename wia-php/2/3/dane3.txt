@@ -1,0 +1,2 @@
+max=49
+srednia= 27.6

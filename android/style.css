@@ -1,0 +1,117 @@
+*{
+	margin: auto;
+	padding:0;
+}
+
+header{
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-image: linear-gradient(grey, black);
+	
+}
+
+header h1{
+	color: #ff6a00;
+	font-style: italic;
+	padding-top: 27.5px;
+	float: left;
+}
+
+header ul{
+	text-decoration: none;
+	list-style: none;
+	float: right;
+	margin-top: 40px;
+}
+
+header ul li{
+	float: left;
+	color: white;
+	margin-left: 25px;
+}
+
+
+#content{
+	width: 840px;
+	margin: 0 auto;
+	padding: 30px;
+		
+}
+
+#content h1{
+	color:	black;
+}
+
+#main-banner{
+	width: 100%;
+	height: 300px;
+	background-color: #ff6a00;
+	background-image: url("android.png");
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: auto 95%;
+}
+
+#main-banner div{
+	width: 50%;
+	height: 100%;
+	float: left;
+	
+	text-align: center;
+}
+
+#main-banner *{
+	width: 75%;
+}
+
+#main-offer{
+	width: 100%;
+	margin-top: 25px;
+	display: inline-flex;
+	flex-direction: horizontal;
+}
+
+.main-offer-item{
+	height: 300px;
+	width: 225px;
+	background-color: #ff6a00;
+	text-align: center;
+	color: white;
+}
+
+.main-offer-item h2{
+	margin-top: 15px;
+text-shadow: 1px 2px rgba(0,0,0,0.25);
+}
+
+.main-offer-item hr{
+	width: 80%;
+	margin-top: 15px;
+}
+
+.main-offer-item p{
+	margin-top: 10px;
+	width: 95%;
+}
+
+.main-offer-item input{
+	width: 75%;
+	height: 25px;
+	margin-top: 20px;
+	color: #ff6a00;
+	background-image: linear-gradient(white, lightgray);
+}
+
+footer{
+	text-align: center; display: flex; flex-direction: horizontal; width: 300px;
+	margin-top: 10px;
+}
+
+footer p{
+	color: #adadad;
+	font-size: 15px;
+}
+

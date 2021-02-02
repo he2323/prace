@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/galeria.css" />
+  </head>
+  <body>
+    <script>
+      const changeImg = (event) => {
+        console.log(event.target.src);
+        const display = document.getElementById("display");
+        display.src = event.target.src;
+      };
+    </script>
+    <div id="all">
+      <div id="galeria">Galeria</div>
+      <div style="text-align: center; margin-top: 20px; margin-bottom: 190px">
+        <img
+          width="200"
+          height="200"
+          id="display"
+          src="./grafika/gwiazdy1.jpg"
+          alt=""
+        />
+      </div>
+      <div id="miniatury">
+        <div class="sec">
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy1.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy1.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy2.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy2.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy3.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy3.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy4.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy4.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy5.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy5.jpg'"
+            />
+          </div>
+        </div>
+        <div class="sec">
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy6.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy6.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy7.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy7.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy8.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy8.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy9.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy9.jpg'"
+            />
+          </div>
+          <div onclick="changeImg(event)" class="miniatura">
+            <img
+              width="110"
+              height="50"
+              src="./grafika/gwiazdy10.jpg"
+              alt="gwaizdy"
+              value="'./grafika/gwiazdy10.jpg'"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

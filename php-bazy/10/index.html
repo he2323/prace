@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filip Rusoł 4B</title>
+  </head>
+  <body>
+    <form action="10.php" method="post">
+      <button type="submit">submit</button>
+      <button type="submit" name="sub" value="SELECT * FROM dane;">dane</button>
+      <button type="submit" name="sub" value="sELECT * FROM inne">inne</button>
+      <button type="submit" name="sub" value="SELECT * FROM koszty;">
+        koszty
+      </button>
+
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT dane.marka, dane.rocznik FROM dane group by dane.rocznik ORDER BY COUNT(*) DESC LIMIT 1;"
+      >
+        rokN
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT '2000-2005' as Caption, count(*) as Amount from dane where dane.rocznik >=2000 and dane.rocznik <=2005 union all SELECT '2006-2010' as Caption, count(*) as Amount from dane where dane.rocznik >= 2006 and dane.rocznik <= 2010 union all SELECT '2011-2015' as Caption, count(*) as Amount from dane where dane.rocznik >= 2011 and dane.rocznik <= 2015 union all SELECT '2016-2020' as Caption, count(*) as Amount from dane where dane.rocznik >= 2016 and dane.rocznik <= 2020;"
+      >
+        group
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT MAX(inne.wartoscpocz-inne.cenat), (MAX(inne.wartoscpocz-inne.cenat)/inne.wartoscpocz)*100  FROM inne;"
+      >
+        mostLost
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT * FROM koszty where koszt =(SELECT MAX(koszt) from koszty);"
+      >
+        koszta
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT * from dane where nr_rej IN (SELECT nr_rej from inne where kraj='Polska');"
+      >
+        w polsce
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT * from dane where nr_rej Not IN (SELECT nr_rej from inne where kraj='Polska');"
+      >
+        poza polską
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT (inne.wartoscpocz-inne.cenat)/inne.wartoscpocz from inne where inne.nr_rej IN (SELECT nr_rej from dane where marka='Honda')"
+      >
+        Honda
+      </button>
+      <button
+        type="submit"
+        name="sub"
+        value="SELECT (inne.wartoscpocz-inne.cenat)/inne.wartoscpocz from inne where inne.nr_rej IN (SELECT nr_rej from dane where marka='Mercedes')"
+      >
+        Mercedes
+      </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+body {
+  width: 1024px;
+  margin: 0 auto;
+  background-image: url("../grafika/tlostrony.jpg");
+  background-repeat: repeat;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+}
+#baner {
+  width: 1024px;
+  height: 120px;
+
+  background-color: grey;
+  background-image: url("../grafika/gwiazdabaner.png");
+  background-repeat: repeat;
+}
+#reszta {
+  width: 1024px;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#tresc {
+  width: 724px;
+  min-height: calc(100vh - 120px - 60px);
+
+}
+#menu {
+  width: 300px;
+  min-height: calc(100vh - 120px - 60px);
+  text-align: center;
+  background-color: olive;
+  display: block;
+}
+
+.link{
+  font-size: 30px;
+  background-color: aqua;
+  text-align: center;
+  color: white;
+  width: 250px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 10%;
+  margin: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+#stopka {
+  width: 1024px;
+  height: 60px;
+  text-align: center;
+  font-size: 40px;
+  background-color: indigo;
+}

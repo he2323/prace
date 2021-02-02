@@ -1,0 +1,114 @@
+.tab{
+	border-collapse : collapse;
+	border : 2px solid black;
+}
+
+.1{
+	width : 83px;
+	height : 18px;
+	text-align : center;
+	font-weight : bold;
+	border : 2px solid black;
+	color: red;
+}
+
+.zielony{
+	border : 2px solid black;
+	background-color : #b4eba8;
+	width : 83px;
+	height : 48px;
+	text-align : center;
+	color : black;
+}
+
+.napisss{
+	text-align : center;
+	color : #508857;
+	font-weight : bold;
+}
+
+.niebieskie{
+	background-color : #76f9fd;
+	width : 83px;
+	height : 48px;
+	text-align : center;
+	color : black;
+	border : 2px solid black;
+}
+
+.biale{
+	background-color : #ffffff;
+	width : 83px;
+	height : 48px;
+	text-align : center;
+	color : black;
+	border : 2px solid black;
+}
+
+.zolte{
+	background-color : #fadb47;
+	width : 83px;
+	height : 48px;
+	text-align : center;
+	color : black;
+	border : 2px solid black;
+}
+
+.tab2{
+	border-collapse : collapse;
+	border : 3px solid #6d3d6d;
+	margin-top : 100px;
+}
+
+.nazwy{
+	width : 122px;
+	height : 55px;
+	border : 3px solid #6d3d6d;
+	color : black;
+}
+
+.przedmioty{
+	width : 256px;
+	height : 26px;
+	border : 3px solid #6d3d6d;
+	text-align : center;
+	color : black;
+	background-color : #3399ff;
+}
+
+.oceny{
+	width : 200px;
+	height : 26px;
+	border : 3px solid #6d3d6d;
+	color : black;
+	background-color : #3399ff;
+	text-align : center;
+}
+
+.kategorie{
+	width : 62px;
+	height : 26px;
+	border : 3px solid #6d3d6d;
+	color : black;
+	background-color : #ccff99;
+}
+
+.nazwa{
+	width : 122px;
+	height : 26px; 
+	color : black;
+	background-color : #ffff80;
+	border : 2px solid #6d3d6d;
+}
+
+.kom1{
+	width : 62px;
+	height : 26px;
+	background-color : #ffff80;
+	border : 3px solid #6d3d6d;
+}
+
+
+
+
+
